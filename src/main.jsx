@@ -9,6 +9,9 @@ import {
 } from "react-router-dom";
 import Root from './Root/Root';
 import Home from './Pages/Home/Home';
+import AddProduct from './Pages/AddProduct/AddProduct';
+import PopularCategories from './Pages/Category/PopularCategories';
+import Toyota from './BrandPage/Toyota/Toyota';
 
 const router = createBrowserRouter([
   {
@@ -17,8 +20,25 @@ const router = createBrowserRouter([
     children:[
       {
         path:"/",
-        element:<Home></Home>
+        element:<Home></Home>,
+        // loader:()=>fetch('http://localhost:5000/cars')
+        loader:()=>fetch("/brand.json")
       },
+      {
+          path:"/",
+          element:<PopularCategories></PopularCategories>,
+          
+          
+      },
+      {
+        path:"/addProduct",
+        element:<AddProduct></AddProduct>
+      },
+      {
+        path: "/brand/:brandName",
+        element:<Toyota></Toyota>,
+        loader:()=>fetch(`http://localhost:5000/cars`)
+      }
       
     ]
   },

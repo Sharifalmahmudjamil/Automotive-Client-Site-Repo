@@ -1,0 +1,31 @@
+[
+    { "id":"1",
+      "brandName": "TOYOTA",
+      "image": "https://i.ibb.co/c3gTpjC/toyota-emblem.jpg"
+    },
+    {
+      "id":"2",
+      "brandName": "BMW",
+      "image": "https://i.ibb.co/3BZLmx0/bmw-logo-pictures-1vpyk0cc3rcxcuyk.jpg"
+    },
+    {
+      "id":"3",
+      "brandName": "Ford",
+      "image": "https://i.ibb.co/51mHZYW/ford-logo-illustration-958x575.jpg"
+    },
+    {
+      "id":"4",
+      "brandName": "Mercedes-Benz",
+      "image": "https://i.ibb.co/1GSLHmK/mercedes-logo-1916.png"
+    },
+    {
+      "id":"5",
+      "brandName": "Tesla",
+      "image": "https://i.ibb.co/cQZ5scX/7d6861b8b9fc696f0ab97fff3c3c87ec.jpg"
+    },
+    {
+      "id":"6",
+      "brandName": "Honda",
+      "image": "https://i.ibb.co/x5f71Mm/Honda-symbol-2.jpg"
+    }
+  ]
