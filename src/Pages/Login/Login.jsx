@@ -1,12 +1,29 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 // import swal from 'sweetalert';
 import { FaGoogle,FaEye ,FaEyeSlash } from 'react-icons/fa';
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProviders";
+import swal from "sweetalert";
+import Navbar from "../Navber/Navbar";
 
 
 const Login = () => {
+  const {signIn,googleSignIn}= useContext(AuthContext)
+  const location=useLocation();
 
+    // google signIn
+    const handleGoogleLogin=()=>{
+      googleSignIn()
+      .then(result=>console.log(result.user))
+      .catch(error=>{
+        console.error(error)
+      })
+    }
+
+  // eslint-disable-next-line no-unused-vars
+  const [error,setError]=useState("");  
     const [showPassword,setShowPassword]=useState(false);
+    const navigate=useNavigate();
 
     const handleLogin=e=>{
         e.preventDefault();
@@ -15,10 +32,25 @@ const Login = () => {
         const email= form.get("email");
         const password= form.get("password");
         console.log(email,password);
+
+         // sign in
+         signIn(email,password)
+         .then(result=>{
+           console.log(result.user);
+           e.target.reset();
+           
+ 
+           navigate(location?.state? location.state : '/')
+ 
+         })
+         .catch(error=>{
+             console.error(error)
+             swal("Your Email and password invalid.please Check your Email and Password ")
+         })
     }
     return (
         <div>
-            <h1>login</h1>
+            <Navbar></Navbar>
             <div className=" hero min-h-screen  bg-base-200">
   <div className="hero-content flex-col lg:w-1/2 ">
     <div className="text-center lg:text-center">
@@ -64,7 +96,7 @@ const Login = () => {
                     
                    
                 
-                    <button  className="btn btn-neutral w-full">
+                    <button onClick={handleGoogleLogin} className="btn btn-neutral w-full">
                     <FaGoogle ></FaGoogle>
                       Log in with Google</button>
                     
@@ -72,9 +104,9 @@ const Login = () => {
                     
                   </div>
       </form>
-      {/* {
+      {
         error&& <p>{swal}</p>
-      } */}
+      }
       <p className="text-center mb-8 p-5">Do not Have An Account ? <Link className="text-rose-600 font-bold" to="/register">Create an Account</Link></p>
     </div>
   </div>
