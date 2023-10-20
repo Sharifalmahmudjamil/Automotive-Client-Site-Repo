@@ -1,16 +1,22 @@
+import Aos from "aos";
 
+import 'aos/dist/aos.css'
 
 import { AiFillHeart } from "react-icons/ai";
 import { FaEye } from 'react-icons/fa';
 import { BsEmojiHeartEyes} from "react-icons/bs";
+import { useEffect } from "react";
 
 
 
 
 const Gallery = () => {
+        useEffect(()=>{
+                Aos.init()
+              },[])
     return (
 
-        <div>
+        <div data-aos="zoom-in-down">
             
         <div className="overflow-hidden" >
                 
