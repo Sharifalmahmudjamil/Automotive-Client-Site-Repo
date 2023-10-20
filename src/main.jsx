@@ -18,6 +18,7 @@ import AuthProviders from './Providers/AuthProviders';
 import Details from './Pages/Details/Details';
 import Update from './Pages/Update/Update';
 import Gallery from './Pages/Gallery/Gallery';
+import MyCart from './Pages/MyCart/MyCart.JSX';
 
 const router = createBrowserRouter([
   {
@@ -68,6 +69,11 @@ const router = createBrowserRouter([
         path:'/gallery',
         element:<Gallery></Gallery>
       },
+      {
+        path:'/cart',
+        element:<MyCart></MyCart>,
+        loader:()=> fetch('http://localhost:5000/cart')
+      }
       
       
     ]
