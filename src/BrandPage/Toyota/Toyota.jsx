@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 // import CardToyota from "./CardToyota/CardToyota";
 
 
@@ -14,7 +14,7 @@ const Toyota = () => {
     
     return (
        
-        <div className="mx-auto container mt-6 grid grid-cols-1 lg:grid-cols-3">
+        <div className="mx-auto container mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* <h2>name: {brandName}</h2> */}
             {
                 products.map(data=> <div  key={data._id}> 
@@ -36,8 +36,15 @@ const Toyota = () => {
   <input type="radio" name="rating-2" className="mask mask-star-2 bg-rose-400" />
 </div>
     <div className="card-actions justify-between">
+      <Link to={`/details/${data._id}`}>
       <button className="btn btn-sm bg-rose-600 text-white">Details</button>
+      </Link>
+
+      <Link to={`/updateCar/${data._id}`}>
       <button className="btn btn-sm bg-rose-600 text-white">Update</button>
+      </Link>
+     
+      
     </div>
   </div>
 </div>

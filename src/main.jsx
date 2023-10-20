@@ -15,6 +15,9 @@ import Toyota from './BrandPage/Toyota/Toyota';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import AuthProviders from './Providers/AuthProviders';
+import Details from './Pages/Details/Details';
+import Update from './Pages/Update/Update';
+import Gallery from './Pages/Gallery/Gallery';
 
 const router = createBrowserRouter([
   {
@@ -50,6 +53,21 @@ const router = createBrowserRouter([
         path:"/register",
         element:<Register></Register>
       },
+      {
+        path:"/details/:id",
+        element:<Details></Details>,
+        loader:({params})=>fetch(`http://localhost:5000/cars/${params.id}`)
+
+      },
+      {
+        path:'/updateCar/:id',
+        element:<Update></Update>,
+        loader:({params})=>fetch(`http://localhost:5000/cars/${params.id}`)
+      },
+      {
+        path:'/gallery',
+        element:<Gallery></Gallery>
+      }
       
     ]
   },
