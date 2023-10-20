@@ -1,5 +1,6 @@
 
 import { useLoaderData, } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const Details = () => {
@@ -7,6 +8,28 @@ const Details = () => {
     
     const loadedData=useLoaderData();
     console.log(loadedData);
+    
+    const handleAddToCart=()=>{
+        fetch('http://localhost:5000/cart',{
+          method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(loadedData)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Car Added SuccessFully',
+                    icon: 'success',
+                    confirmButtonText: 'Closed'
+                  })
+            }
+        })
+    }
     return (
         <div className="mx-auto container">
             <h1 className="text-5xl text-rose-500 font-semibold text-center ">Car Information</h1>
@@ -27,7 +50,7 @@ const Details = () => {
 <p className="text-center text-2xl">{loadedData.description}</p>
     <div className="card-actions justify-between">
      
-      <button className="btn btn-sm bg-rose-600 text-white">Add to Cart</button>
+  <button onClick={handleAddToCart} className="btn btn-sm bg-rose-600 text-white">Add to Cart</button>
       
       
      
