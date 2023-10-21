@@ -1,6 +1,7 @@
 
 import { useLoaderData, } from "react-router-dom";
 import Swal from "sweetalert2";
+import Navbar from "../Navber/Navbar";
 
 
 const Details = () => {
@@ -32,6 +33,7 @@ const Details = () => {
     }
     return (
         <div className="mx-auto container">
+          <Navbar></Navbar>
             <h1 className="text-5xl text-rose-500 font-semibold text-center ">Car Information</h1>
             <div className="card w-auto bg-base-100 shadow-xl ">
   <figure><img src={loadedData.photo} alt="Shoes" /></figure>

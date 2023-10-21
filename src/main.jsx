@@ -19,6 +19,7 @@ import Details from './Pages/Details/Details';
 import Update from './Pages/Update/Update';
 import Gallery from './Pages/Gallery/Gallery';
 import MyCart from './Pages/MyCart/MyCart.JSX';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -33,17 +34,21 @@ const router = createBrowserRouter([
       },
       {
           path:"/",
-          element:<PopularCategories></PopularCategories>,
+          element:<PopularCategories></PopularCategories>
           
           
       },
       {
         path:"/addProduct",
-        element:<AddProduct></AddProduct>
+        element:<PrivateRoute>
+          <AddProduct></AddProduct>
+        </PrivateRoute>
       },
       {
         path: "/brand/:brandName",
-        element:<Toyota></Toyota>,
+        element:<PrivateRoute>
+          <Toyota></Toyota>
+        </PrivateRoute>,
         loader:()=>fetch(`http://localhost:5000/cars`)
       },
       {

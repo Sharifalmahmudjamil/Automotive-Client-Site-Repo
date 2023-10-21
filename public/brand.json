@@ -1,31 +1,49 @@
 [
     { "id":"1",
       "brandName": "TOYOTA",
-      "image": "https://i.ibb.co/c3gTpjC/toyota-emblem.jpg"
+      "image": "https://i.ibb.co/c3gTpjC/toyota-emblem.jpg",
+      "photo1":"https://i.ibb.co/fvJzHNR/2021-ford-escape-phev-108-1651779562.jpg",
+      "photo2":"https://i.ibb.co/Cmxj3nv/ford-f-150-xlt-6129.jpg",
+      "photo3":"https://i.ibb.co/xfybXXM/4ea55578eca62056de7065284ea53bfef70f6f0f-16x9-x0y0w3924h2207.jpg"
     },
     {
       "id":"2",
       "brandName": "BMW",
-      "image": "https://i.ibb.co/3BZLmx0/bmw-logo-pictures-1vpyk0cc3rcxcuyk.jpg"
+      "image": "https://i.ibb.co/3BZLmx0/bmw-logo-pictures-1vpyk0cc3rcxcuyk.jpg",
+      "photo1":"https://i.ibb.co/dBRDwck/bmw-540i-10-2.jpg",
+      "photo2":"https://i.ibb.co/k6PDC5Y/bmw-7-series-2023-2-jpg-1667834211.jpg",
+      "photo3":"https://i.ibb.co/vJbwtCS/4e9a7794-1663012415.jpg"
     },
     {
       "id":"3",
       "brandName": "Ford",
-      "image": "https://i.ibb.co/51mHZYW/ford-logo-illustration-958x575.jpg"
+      "image": "https://i.ibb.co/51mHZYW/ford-logo-illustration-958x575.jpg",
+      "photo1":"https://i.ibb.co/njzMYHx/p90492280-1675791130.jpg",
+      "photo2":"https://i.ibb.co/dJgM4YJ/car2.jpg",
+      "photo3":"https://i.ibb.co/RzCN5Yh/toyota-camry-main-623992900d1ed.jpg"
     },
     {
       "id":"4",
       "brandName": "Mercedes-Benz",
-      "image": "https://i.ibb.co/1GSLHmK/mercedes-logo-1916.png"
+      "image": "https://i.ibb.co/1GSLHmK/mercedes-logo-1916.png",
+      "photo1":"https://i.ibb.co/bQ1pnWZ/2021-Mercedes-Benz-S-Class-S-450-sedan-red-press-image-1001x565p.jpg",
+      "photo2":"https://i.ibb.co/9HC125X/DSC04299.jpg",
+      "photo3":"https://i.ibb.co/k6PDC5Y/bmw-7-series-2023-2-jpg-1667834211.jpg"
     },
     {
       "id":"5",
       "brandName": "Tesla",
-      "image": "https://i.ibb.co/cQZ5scX/7d6861b8b9fc696f0ab97fff3c3c87ec.jpg"
+      "image": "https://i.ibb.co/cQZ5scX/7d6861b8b9fc696f0ab97fff3c3c87ec.jpg",
+      "photo1":"https://i.ibb.co/wcMQK8d/Tesla-Model-S-2016-01.jpg",
+      "photo2":"https://i.ibb.co/BqxQmNM/437325-tesla-model-y-2020-tracer-la-voie-une-fois-de-plus.jpg",
+      "photo3":"https://i.ibb.co/yWB8rVg/DSC07487.jpg"
     },
     {
       "id":"6",
       "brandName": "Honda",
-      "image": "https://i.ibb.co/x5f71Mm/Honda-symbol-2.jpg"
+      "image": "https://i.ibb.co/x5f71Mm/Honda-symbol-2.jpg",
+      "photo1":"https://i.ibb.co/SsWc9nS/08-2023-honda-pilot-elite-1667596726-1024x576.jpg",
+      "photo2":"https://i.ibb.co/mtKBDJK/2012-Honda-Ridgeline-Mexican-RTL.jpg",
+      "photo3":"https://i.ibb.co/gr74FP5/10best-trucks-suvs-2023-honda-crv-113-1673298616.jpg"
     }
   ]

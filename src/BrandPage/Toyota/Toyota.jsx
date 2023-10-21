@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import Slider from "../../Pages/Slider/Slider";
 // import CardToyota from "./CardToyota/CardToyota";
 
 
@@ -6,16 +8,36 @@ const Toyota = () => {
 
     const {brandName}=useParams();
     console.log(brandName);
+    const[banner,setBanner]=useState([]);
+    useEffect(()=>{
+      fetch('/brand.json')
+      .then(res=>res.json())
+      .then(data=>{
+        setBanner(data);
+      })
+    },[])
     const loadedData=useLoaderData();
     console.log(loadedData);
     
     const products = loadedData.filter(product=>product.brandName===brandName);
     console.log(products);
+    const slider = banner.filter(slide=>slide.brandName===brandName);
+    console.log(slider);
+   
     
     return (
        
-        <div className="mx-auto container mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* <h2>name: {brandName}</h2> */}
+       <div>
+
+        <div>
+        {
+              slider.map(slide=><Slider key={slide.brand} slide={slide}></Slider>)
+            }
+        </div>
+
+<div className="mx-auto container mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+          
             {
                 products.map(data=> <div  key={data._id}> 
                 {/* <h2>{data.name}</h2>
@@ -53,6 +75,7 @@ const Toyota = () => {
             }
             
         </div>
+       </div>
         
     );
 };

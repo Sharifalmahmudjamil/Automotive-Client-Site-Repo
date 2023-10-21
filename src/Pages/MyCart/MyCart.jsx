@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import Navbar from "../Navber/Navbar";
 
 
 const MyCart = () => {
@@ -47,12 +48,13 @@ const MyCart = () => {
 
     return (
         <div className="gird grid-cols-1 lg:grid-cols-2 mx-auto container">
+          <Navbar></Navbar>
            
             {
                 carts.map(cart=>
                     <div key={cart._id} className="">
                     
-                    <div className="card w-96 bg-base-100 shadow-xl ">
+                    <div className="card w-full bg-base-100 shadow-xl mt-6 ">
           <figure><img src={cart.photo} alt="Shoes" /></figure>
           <div className="card-body ">
             <h2 className="card-title  text-2xl font-bold text-rose-500">{cart.brandName}</h2>

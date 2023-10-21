@@ -58,10 +58,10 @@ const Navbar = () => {
               {/* <img src={user.photoURL} alt="" />
               <span>{user.email}</span> */}
         <div className="dropdown dropdown-bottom dropdown-end">
-  <label tabIndex={0} className="btn btn-sm m-1">profile</label>
+  <label tabIndex={0} className="btn btn-xs bg-rose-500 m-1">profile</label>
   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
     <li><span>{user.email}</span></li>
-    <li><img src={user.photoURL} alt="" /></li>
+    <li><img  src={user.photoURL} alt="" /></li>
     <li><span className="text-rose-500">{user.displayName}</span></li>
 
   </ul>
