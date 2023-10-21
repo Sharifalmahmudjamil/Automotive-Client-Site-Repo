@@ -20,6 +20,7 @@ import Update from './Pages/Update/Update';
 import Gallery from './Pages/Gallery/Gallery';
 import MyCart from './Pages/MyCart/MyCart.JSX';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import Blogs from './Pages/Blogs/Blogs';
 
 const router = createBrowserRouter([
   {
@@ -76,8 +77,16 @@ const router = createBrowserRouter([
       },
       {
         path:'/cart',
-        element:<MyCart></MyCart>,
+        element:<PrivateRoute>
+          <MyCart></MyCart>
+        </PrivateRoute>,
         loader:()=> fetch('http://localhost:5000/cart')
+      },
+      {
+        path:'/blog',
+        element:<PrivateRoute>
+          <Blogs></Blogs>
+        </PrivateRoute>
       }
       
       
