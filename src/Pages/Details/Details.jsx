@@ -11,7 +11,7 @@ const Details = () => {
     console.log(loadedData);
     
     const handleAddToCart=()=>{
-        fetch('http://localhost:5000/cart',{
+        fetch(' https://automotive-store-server-n2gzcvngt-sharif-al-mahmuds-projects.vercel.app/cart',{
           method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -49,6 +49,7 @@ const Details = () => {
   <input type="radio" name="rating-2" className="mask mask-star-2 bg-rose-400" />
   <input type="radio" name="rating-2" className="mask mask-star-2 bg-rose-400" />
 </div>
+<p>Rating: {loadedData.rating}/5</p>
 <p className="text-center text-2xl">{loadedData.description}</p>
     <div className="card-actions justify-between">
      

@@ -2,15 +2,17 @@
 /* eslint-disable no-unused-vars */
 
 import Navbar from "../Navber/Navbar";
-
+import Marquee from "react-fast-marquee";
 
 const Slider = ({slide}) => {
     // eslint-disable-next-line react/prop-types
     const {photo1,photo2,photo3}=slide
     return (
+     
         <div className="mx-auto container" >
             <Navbar></Navbar>
             <h1 className="text-5xl font-semibold text-rose-500 text-center">Advertisement</h1>
+            
           <div className="carousel w-full mt-6">
   <div id="slide1" className="carousel-item relative w-full">
     <img src={slide.photo1} className="w-full" />
@@ -37,6 +39,7 @@ const Slider = ({slide}) => {
 </div>
 
         </div>
+        
         
     );
 };

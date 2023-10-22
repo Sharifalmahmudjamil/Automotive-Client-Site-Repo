@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2'
 
@@ -18,7 +19,7 @@ const AddProduct = () => {
         console.log(newCar);
 
         // send data to server
-        fetch("http://localhost:5000/cars",{
+        fetch(" https://automotive-store-server-n2gzcvngt-sharif-al-mahmuds-projects.vercel.app/cars",{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -41,6 +42,9 @@ const AddProduct = () => {
     }
     return (
         <div>
+            <Helmet>
+            <title>Automotive||Add Product</title>
+          </Helmet>
             <div className=" p-24 bg-rose-500">
            <Link to="/">
            <button className="btn lg:btn-outline mb-5">Back To Home</button>

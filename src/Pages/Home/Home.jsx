@@ -1,3 +1,5 @@
+
+import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
 import PopularCategories from "../Category/PopularCategories";
 import ClientReview from "../ClientReview/ClientReview";
@@ -10,7 +12,9 @@ import Navbar from "../Navber/Navbar";
 const Home = () => {
     return (
         <div>
-           
+          <Helmet>
+            <title>Automotive||Home</title>
+          </Helmet>
             <Navbar></Navbar>
             <Banner></Banner>
             <PopularCategories></PopularCategories>

@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import {FaEye ,FaEyeSlash } from 'react-icons/fa';
 import swal from 'sweetalert';
 import {  ToastContainer, toast } from 'react-toastify';
@@ -14,6 +14,7 @@ const Register = () => {
     // eslint-disable-next-line no-unused-vars
     const [error,setError]=useState("");
     const [showPassword,setShowPassword]=useState(false);
+  
 
     const handleRegister=e=>{
         e.preventDefault();
@@ -64,7 +65,9 @@ const Register = () => {
       createUser(email,password)
     .then(result=>{
         console.log(result.user) 
+      
         e.target.reset()
+        
         
 
     })

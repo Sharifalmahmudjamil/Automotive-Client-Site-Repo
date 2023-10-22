@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import Navbar from "../Navber/Navbar";
+import { Helmet } from "react-helmet-async";
 
 
 const MyCart = () => {
@@ -22,7 +23,7 @@ const MyCart = () => {
         }).then((result) => {
           if (result.isConfirmed) {
          
-            fetch(`http://localhost:5000/cart/${id}`,{
+            fetch(` https://automotive-store-server-n2gzcvngt-sharif-al-mahmuds-projects.vercel.app/cart/${id}`,{
               method: 'DELETE'
             })
             .then(res=>res.json())
@@ -47,16 +48,20 @@ const MyCart = () => {
     }
 
     return (
-        <div className="gird grid-cols-1 lg:grid-cols-2 mx-auto container">
+        <div>
+          <Helmet>
+            <title>Automotive|| My CART</title>
+          </Helmet>
           <Navbar></Navbar>
-           
+           <div  className="gird grid-cols-1 lg:grid-cols-2 mx-auto container" >
             {
+              
                 carts.map(cart=>
                     <div key={cart._id} className="">
                     
                     <div className="card w-full bg-base-100 shadow-xl mt-6 ">
           <figure><img src={cart.photo} alt="Shoes" /></figure>
-          <div className="card-body ">
+          <div className="card-body items-center ">
             <h2 className="card-title  text-2xl font-bold text-rose-500">{cart.brandName}</h2>
             <h2> <span className="text-lg font-medium">Name:</span> {cart.name}</h2>
             <p> <span className="text-lg font-medium">Price:</span> {cart.price}</p>
@@ -68,6 +73,7 @@ const MyCart = () => {
           <input type="radio" name="rating-2" className="mask mask-star-2 bg-rose-400" />
           <input type="radio" name="rating-2" className="mask mask-star-2 bg-rose-400" />
         </div>
+        <p>Rating: {cart.rating}/5</p>
         <p className="text-center text-base">{cart.description}</p>
             <div className="card-actions justify-between">
              
@@ -78,12 +84,14 @@ const MyCart = () => {
              
               
             </div>
+            </div>
           </div>
         </div>
-                </div>
+                
                     
                     )
             }
+            </div>
         </div>
     );
 };

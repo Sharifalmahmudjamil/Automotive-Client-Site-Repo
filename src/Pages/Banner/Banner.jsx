@@ -8,8 +8,8 @@ const Banner = () => {
     Aos.init()
   },[])
     return (
-        <div  data-aos="fade-left">
-          <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/tDqQtTs/Background-home.png)'}}>
+        <div   data-aos="fade-left ">
+          <div className="hero min-h-screen " style={{backgroundImage: 'url(https://i.ibb.co/tDqQtTs/Background-home.png)'}}>
   <div className="hero-overlay bg-opacity-30"></div>
   <div className=" text-start ">
     <div className="max-w-md">

@@ -23,7 +23,7 @@ const Update = () => {
     console.log(UpdateCar);
 
     // send data to server
-    fetch(`http://localhost:5000/cars/${_id}`,{
+    fetch(` https://automotive-store-server-n2gzcvngt-sharif-al-mahmuds-projects.vercel.app/cars/${_id}`,{
         method:'PUT',
         headers:{
             'content-type':'application/json'

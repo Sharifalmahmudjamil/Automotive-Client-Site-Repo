@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -15,8 +16,8 @@ const Footer = () => {
     <header className="footer-title">Company</header> 
     <a className="link link-hover hover:text-rose-700">About us</a> 
     <a className="link link-hover hover:text-rose-700">Contact</a> 
-    <a className="link link-hover hover:text-rose-700">Jobs</a> 
-    <a className="link link-hover hover:text-rose-700">Press kit</a>
+    <Link to="/addProduct"><a className="link link-hover hover:text-rose-700">Add product</a></Link> 
+   <Link to="/gallery"> <a className="link link-hover hover:text-rose-700">Gallery</a></Link>
   </nav> 
   <nav>
     <header className="footer-title">Legal</header> 

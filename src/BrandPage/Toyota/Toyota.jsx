@@ -50,13 +50,14 @@ const Toyota = () => {
     <h2> <span className="text-lg font-medium">Name:</span> {data.name}</h2>
     <p> <span className="text-lg font-medium">Price:</span> {data.price}</p>
     <p> <span className="text-lg font-medium">Types Of Categories:</span> {data.TypesOfProduct}</p>
-    <div className="rating">
+    {/* <div className="rating">
   <input type="radio" name="rating-2" className="mask mask-star-2 bg-rose-400" />
   <input type="radio" name="rating-2" className="mask mask-star-2 bg-rose-400" checked />
   <input type="radio" name="rating-2" className="mask mask-star-2 bg-rose-400" />
   <input type="radio" name="rating-2" className="mask mask-star-2 bg-rose-400" />
   <input type="radio" name="rating-2" className="mask mask-star-2 bg-rose-400" />
-</div>
+</div> */}
+ <p className="text-lg font-medium"> Rating: {data.rating}/5</p>
     <div className="card-actions justify-between">
       <Link to={`/details/${data._id}`}>
       <button className="btn btn-sm bg-rose-600 text-white">Details</button>

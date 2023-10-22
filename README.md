@@ -1,8 +1,15 @@
-# React + Vite
+# Question: Add at least five bullet points mentioning different features and functionalities of your website.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ANS: This Assignment is Automotive Website.and I have add five features and functionalities of My website.
 
-Currently, two official plugins are available:
+ 1. Registration and Login Page: Allow registered users to create and manage their login page and access a personalized Automotive Website.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ 2.  Our Popular Categories: When user login then user watching Our Popular Categories section and advertisement.
+
+ 3. Add Cart: When user see our popular catagories section and all types of brand then user add cart and all cart add to MY Cart.
+
+ 4. CRUD Operation: Automotive website i am using CRUD operation and all data send to mongodb.
+
+ 5. Private Route: In Automotive website i have using Private Route.when  user login then user can see the all section.otherwise user see some section.
+
+ 6. Firebase Authentication: In this website using firebase Authentication.

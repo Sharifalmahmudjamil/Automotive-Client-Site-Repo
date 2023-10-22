@@ -21,16 +21,20 @@ import Gallery from './Pages/Gallery/Gallery';
 import MyCart from './Pages/MyCart/MyCart.JSX';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Blogs from './Pages/Blogs/Blogs';
+import ErrorPage from './Pages/ErrorPage/Errorpage';
+import { HelmetProvider } from 'react-helmet-async';
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:"/",
         element:<Home></Home>,
-        // loader:()=>fetch('http://localhost:5000/cars')
+        // loader:()=>fetch(' https://automotive-store-server-n2gzcvngt-sharif-al-mahmuds-projects.vercel.app/cars')
         loader:()=>fetch("/brand.json")
       },
       {
@@ -50,7 +54,7 @@ const router = createBrowserRouter([
         element:<PrivateRoute>
           <Toyota></Toyota>
         </PrivateRoute>,
-        loader:()=>fetch(`http://localhost:5000/cars`)
+        loader:()=>fetch(` https://automotive-store-server-n2gzcvngt-sharif-al-mahmuds-projects.vercel.app/cars`)
       },
       {
         path:"/login",
@@ -63,13 +67,13 @@ const router = createBrowserRouter([
       {
         path:"/details/:id",
         element:<Details></Details>,
-        loader:({params})=>fetch(`http://localhost:5000/cars/${params.id}`)
+        loader:({params})=>fetch(` https://automotive-store-server-n2gzcvngt-sharif-al-mahmuds-projects.vercel.app/cars/${params.id}`)
 
       },
       {
         path:'/updateCar/:id',
         element:<Update></Update>,
-        loader:({params})=>fetch(`http://localhost:5000/cars/${params.id}`)
+        loader:({params})=>fetch(` https://automotive-store-server-n2gzcvngt-sharif-al-mahmuds-projects.vercel.app/cars/${params.id}`)
       },
       {
         path:'/gallery',
@@ -80,7 +84,7 @@ const router = createBrowserRouter([
         element:<PrivateRoute>
           <MyCart></MyCart>
         </PrivateRoute>,
-        loader:()=> fetch('http://localhost:5000/cart')
+        loader:()=> fetch(' https://automotive-store-server-n2gzcvngt-sharif-al-mahmuds-projects.vercel.app/cart')
       },
       {
         path:'/blog',
@@ -97,8 +101,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthProviders>
+   <HelmetProvider>
+   <AuthProviders>
     <RouterProvider router={router} />
     </AuthProviders>
+   </HelmetProvider>
   </React.StrictMode>,
 )
