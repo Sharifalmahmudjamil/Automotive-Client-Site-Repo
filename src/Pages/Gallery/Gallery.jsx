@@ -6,7 +6,7 @@ import { AiFillHeart } from "react-icons/ai";
 import { FaEye } from 'react-icons/fa';
 import { BsEmojiHeartEyes} from "react-icons/bs";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+
 
 
 
@@ -20,9 +20,7 @@ const Gallery = () => {
         <div data-aos="zoom-in-down">
             
         <div className="overflow-hidden" >
-        <Helmet>
-            <title>Automotive|| Gallery</title>
-          </Helmet>
+       
             
             <h1 className="text-5xl font-bold text-center mt-4 ">Our Gallery</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 mx-auto container mt-6 ">

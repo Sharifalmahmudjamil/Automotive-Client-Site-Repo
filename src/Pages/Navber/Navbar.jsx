@@ -95,7 +95,7 @@ const Navbar = () => {
               </Link>
             }
 
-    {/* <Link to="/login" className="btn btn-sm bg-rose-600 text-white">Login</Link> */}
+   
   </div>
 </div>
 
